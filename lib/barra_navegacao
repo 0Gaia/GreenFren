@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+class BarraNavegacao extends StatelessWidget implements PreferredSizeWidget{
+  
+  final String titulo;
+  final bool voltar;
+
+  const BarraNavegacao({
+    Key? key,
+    this.titulo = "",
+    this.voltar = true
+  }) : super(key: key);
+  
+  @override
+  Size get preferredSize => Size.fromHeight(60);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: Text(titulo),
+      automaticallyImplyLeading: voltar,
+      actions: [
+      ],
+  );
+  }
+}
